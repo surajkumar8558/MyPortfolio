@@ -25,6 +25,7 @@ function App() {
 
   return (
     <>
+    <div className='bg-background'>
       <Nav/>
       <Hero/>
       <About/>
@@ -32,6 +33,7 @@ function App() {
       <Projects/>
       <GetInTouch/>
       <Footer/>
+      </div>
     </>
   )
 }

@@ -9,6 +9,14 @@ export default {
         button: "#2F3634",
       },
     },
+    screens: {
+      vs: { max: "420px" },
+      ls: { min: "421px", max: "639px" },
+      sm: { min: "640px", max: "767px" },
+      md: { min: "768px", max: "1023px" },
+      lg: { min: "1024px", max: "1280px" },
+      xl: { min: "1280px" },
+    },
   },
   plugins: [],
 };
