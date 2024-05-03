@@ -13,7 +13,7 @@ function Skills(){
 
     return (
         <>
-            <div className=" min-h-[90vh] bg-background flex justify-center items-center flex-col">
+            <div id="Skills" className=" min-h-[90vh] bg-background flex justify-center items-center flex-col">
                 <span className="text-white text-3xl italic">Skills</span>
                 <p className="text-white mb-6">I love to explore new technologies</p>
                 <div className="max-w-[1110px] grid grid-cols-3 gap-4  
@@ -24,7 +24,7 @@ function Skills(){
                 " >
                     {
                         skills.map((skill, index) => (
-                            <div className="bg-card shadow-2xl flex h-40 w-72 rounded-xl justify-center items-center">
+                            <div key={index} className="bg-card shadow-2xl flex h-40 w-72 rounded-xl justify-center items-center">
                                 <p className="text-white" key={index}>{skill}</p>
                             </div>
                         ))

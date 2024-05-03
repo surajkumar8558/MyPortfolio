@@ -14,13 +14,21 @@ function Hero(){
                         </p>
                         <div className='flex justify-between mt-10 vs:flex-col'>
                             <div className="flex gap-4">
-                                <img src={github} width={24} height={24} alt="" />
-                                <img src={linkedin} width={24} height={24} alt="" />
-                                <img src={gmail} width={24} height={24} alt="" />
+                                <a href="https://github.com/surajkumar8558" target="_blank">
+                                    <img src={github} width={24} height={24} alt="" />
+                                </a>
+                                <a href="https://www.linkedin.com/in/suraj-prajapati8558/" target="_blank">
+                                    <img src={linkedin} width={24} height={24} alt="" />
+                                </a>
+                                <a href="mailto:prajaptisuraj02@gmail.com" target="_blank">
+                                    <img src={gmail} width={24} height={24} alt="" />
+                                </a>
                             </div>
                             <div className='flex gap-4 sm:flex-col vs:flex-col vs:mt-8 ls:flex-col'>
+                                <a href="https://drive.google.com/file/d/1SsPXzMSZYB8mFJM3RcCNn-MommaZT7_y/view" target="_blank">
                                 <button className='bg-transparent border-black border-2 text-black px-8 py-2 rounded-full'>DOWNLOAD RESUME</button>
-                                <button className='bg-button text-white px-8 py-2 rounded-full'>VIEW PROJECTS</button>
+                                </a>
+                                <button className='bg-button text-white px-8 py-2 rounded-full'> <a href="#Project">VIEW PROJECTS</a></button>
                             </div>
                         </div>
                     </div>

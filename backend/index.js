@@ -6,7 +6,7 @@ const PORT = 8000;
 
 // app.use(cors());
 
-app.get("/api/jokes", (req, res) => {
+app.get("/admin", (req, res) => {
   const projectData = [
     {
       projectID: 1,

@@ -5,7 +5,7 @@ import linkedin from '../assets/icons/white/linkedin.svg';
 function GetInTouch(){
     return (
         <>
-            <div className="text-white h-[80vh] flex justify-center items-center flex-col bg-background">
+            <div id='Contact' className="text-white h-[80vh] flex justify-center items-center flex-col bg-background">
                 <div className="mb-2 italic text-3xl">
                     Get in Touch
                 </div>
@@ -18,9 +18,15 @@ function GetInTouch(){
                     </p>
                 </div>
                 <div className=" flex gap-8">
-                    <img src={github} width={24} height={24} alt="" />
-                    <img src={linkedin} width={24} height={24} alt="" />
-                    <img src={gmail} width={24} height={24} alt="" />
+                    <a href="https://github.com/surajkumar8558" target='_blank'>
+                        <img src={github} width={24} height={24} alt="" />
+                    </a>
+                    <a href="https://www.linkedin.com/in/suraj-prajapati8558/" target='_blank'>
+                        <img src={linkedin} width={24} height={24} alt="" />
+                    </a>
+                    <a href="mailto:prajaptisuraj02@gmail.com">
+                        <img src={gmail} width={24} height={24} alt="" />
+                    </a>
                 </div>
             </div>
         </>

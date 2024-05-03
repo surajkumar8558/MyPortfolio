@@ -5,7 +5,7 @@ import evening from "../assets/images/evening.jpg";
 function Project(){
     return (
         <>
-            <div className="min-h-[90vh] bg-background flex justify-center items-center flex-col py-28">
+            <div id="Project" className="min-h-[90vh] bg-background flex justify-center items-center flex-col py-28">
                 <div className=" mb-8 flex flex-col justify-center items-center">
                     <p className="italic text-white text-3xl">Projects</p>
                     <p className=" mt-2 text-white">Some projects i have worked on</p>

@@ -8,6 +8,7 @@ import Projects  from './sections/Projects';
 import GetInTouch  from './sections/GetInTouch';
 import Footer  from './sections/Footer';
 import axios from 'axios';
+import ShowMenu from './components/ShowMenu';
 
 function App() {
   // const [jokes, setJokes] = useState([]);
@@ -27,6 +28,7 @@ function App() {
     <>
     <div className='bg-background'>
       <Nav/>
+      <ShowMenu/>
       <Hero/>
       <About/>
       <Skills/>

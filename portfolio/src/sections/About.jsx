@@ -1,7 +1,7 @@
 function About(){
     return (
         <>
-            <div className="flex justify-center items-center h-[90vh] bg-background">
+            <div id="About" className="flex justify-center items-center h-[90vh] bg-background">
                 <div className="flex justify-center items-start w-[40%] gap-8  
                 vs:w-[80%]
                 vs:flex-col 
