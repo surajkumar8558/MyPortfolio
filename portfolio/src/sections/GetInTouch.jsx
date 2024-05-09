@@ -11,10 +11,10 @@ function GetInTouch(){
                 </div>
                 <div className="mb-4 max-w-[550px] flex justify-center flex-col items-center">
                     <p className='ls:text-center ls:mx-6 vs:text-center vs:mx-6'>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat, 
+                        Would you like to connect. Let's have a conversation together
                     </p>
                     <p className='ls:text-center ls:mx-6 vs:text-center vs:mx-6'>
-                        reiciendis? Error nostrum eaque consequuntur sed.
+                        Here is my social channels.
                     </p>
                 </div>
                 <div className=" flex gap-8">

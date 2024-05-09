@@ -1,41 +1,22 @@
-import { useState, useEffect } from 'react'
 import './App.css'
-import Nav from './components/Nav';
-import Hero  from './sections/Hero';
-import About  from './sections/About';
-import Skills  from './sections/Skills';
-import Projects  from './sections/Projects';
-import GetInTouch  from './sections/GetInTouch';
-import Footer  from './sections/Footer';
-import axios from 'axios';
-import ShowMenu from './components/ShowMenu';
+import HomePage from './pages/HomePage';
+import AdminSignup from './pages/AdminSignup';
+import AdminLogin from './pages/AdminLogin';
+import Dashboard from './pages/Dashboard';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
 function App() {
-  // const [jokes, setJokes] = useState([]);
-
-  // useEffect(() => {
-  //   axios.get('/api/jokes').
-  //   then(response => {
-  //     setJokes(response.data)
-  //     console.log(response.data);
-  //   }).
-  //   catch((err) => {
-  //     console.log(err);
-  //   })
-  // }, [])
 
   return (
     <>
-    <div className='bg-background'>
-      <Nav/>
-      <ShowMenu/>
-      <Hero/>
-      <About/>
-      <Skills/>
-      <Projects/>
-      <GetInTouch/>
-      <Footer/>
-      </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path='/' element={<HomePage/>}/>
+        <Route path='/adminRegister' element={<AdminSignup/>}/>
+        <Route path='/adminLogin' element={<AdminLogin/>}/>
+        <Route path='/dashboard' element={<Dashboard/>}/>
+      </Routes>
+      </BrowserRouter>
     </>
   )
 }

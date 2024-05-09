@@ -6,9 +6,9 @@ function Skills(){
         "HTML/CSS",
         "Javascript",
         "React",
-        "Redux",
-        "NextJS",
-        "MongoDB"   
+        "Express",
+        "MongoDB",
+        "NodeJS"   
     ]
 
     return (

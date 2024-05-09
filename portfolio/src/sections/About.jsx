@@ -17,8 +17,8 @@ function About(){
                 md:items-center">
 
                     <div className="text-white whitespace-nowrap text-2xl italic">About me</div>
-                    <p className="text-white vs:text-center ls:text-center sm:text-center md:text-center">Hello my name is suraj, and i love creating new things. <br />
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio aperiam veniam sequi animi unde harum iusto officiis tenetur nesciunt quas quibusdam, rerum atque corrupti necessitatibus architecto recusandae praesentium quod itaque. Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate sint possimus alias, odio molestias, reprehenderit, a nesciunt illo perspiciatis harum nihil corrupti veritatis ipsam accusamus odit impedit. Magni, corrupti iusto?
+                    <p className="text-white vs:text-center ls:text-center sm:text-center md:text-center">
+                        Detail-oriented Web Developer, passionate about crafting exceptional digital experiences. Recently graduated with a degree in Computer Science, specializing in web development. Equipped with a solid academic background and hands-on project experience, adept at problem-solving and eager to contribute effectively to collaborative teams. Proficient in HTML, CSS, JavaScript, React and enthusiastic about Express, MongoDB and NodeJS. Dedicated to staying abreast of the latest web technologies and trends.
                     </p>
                 </div>
             </div>

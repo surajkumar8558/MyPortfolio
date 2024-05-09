@@ -3,11 +3,12 @@ import ReactDOM from 'react-dom/client'
 import App from './App.jsx'
 import './index.css'
 import MenuContextProvider from './context/MenuContextProvider.jsx'
+import LoginContextProvider from './context/loginContextProvider.jsx'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
-  <React.StrictMode>
-    <MenuContextProvider>
+  <MenuContextProvider>
+    <LoginContextProvider>
       <App />
-    </MenuContextProvider>
-  </React.StrictMode>,
+    </LoginContextProvider>
+  </MenuContextProvider> 
 )
