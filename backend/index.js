@@ -1,39 +1,22 @@
 const express = require("express");
+require("dotenv").config();
 
 const app = express();
+app.use(express.urlencoded({ extended: true }));
+app.use(express.json());
 
-const PORT = 8000;
+const data_routes = require("./routes/route.js");
 
-// app.use(cors());
+app.use("/api", data_routes);
 
-app.get("/admin", (req, res) => {
-  const projectData = [
-    {
-      projectID: 1,
-      projectName: "Portfolio",
-      technologiesUsed: ["React", "NodeJS", "Tailwind", "Express", "MongoDB"],
-    },
-    {
-      projectID: 2,
-      projectName: "ChatApp",
-      technologiesUsed: [
-        "WebSocket",
-        "React",
-        "NodeJS",
-        "Tailwind",
-        "Express",
-        "MongoDB",
-      ],
-    },
-    {
-      projectID: 3,
-      projectName: "E-Commerce",
-      technologiesUsed: ["React", "NodeJS", "Tailwind", "Express", "MongoDB"],
-    },
-  ];
-  return res.send(projectData);
-});
-
-app.listen(PORT, () => {
-  console.log("App is listening on PORT: " + PORT);
-});
+const PORT = process.env.PORT || 8000;
+const connectDB = require("./dbConnection.js");
+connectDB()
+  .then(() => {
+    app.listen(PORT, () => {
+      console.log("App is listening on PORT: " + PORT);
+    });
+  })
+  .catch((error) => {
+    console.log("Error");
+  });
