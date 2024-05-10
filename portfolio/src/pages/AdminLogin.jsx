@@ -46,16 +46,6 @@ function AdminLogin() {
         })
     }
 
-    // const deleteCookie = async () => {
-    //     const response = await fetch("/api/adminLogin", {
-    //         method: "GET",
-    //         headers: {
-    //             "Content-Type" : "application/json"
-    //         }
-    //     })
-    //     // console.log(response.data)
-    // }
-
     return (
         <>
             <div className="bg-background h-[100vh] w-[100vw] flex justify-center items-center flex-col">
@@ -66,7 +56,6 @@ function AdminLogin() {
                     {validUser ? "" : <span className="text-gray-400">Only admin allowed</span>}
                     <button onClick={CreateUser} className="bg-card shadow-lg text-white text-lg px-8 py-1 mt-2">Login</button>
                 </form>
-                    {/* <button onClick={deleteCookie} className="bg-card shadow-lg text-white text-lg px-8 py-1 mt-2">Clear Cookie</button> */}
             </div>
         </>
     )

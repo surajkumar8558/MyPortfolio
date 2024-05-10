@@ -56,6 +56,7 @@ const login = async (req, res) => {
 
 const clearCookie = (req, res) => {
   return res.clearCookie("access_token").send({
+    success: true,
     message: "Logout Successfully",
   });
 };
