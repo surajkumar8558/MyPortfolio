@@ -107,21 +107,21 @@ function Dashboard(props) {
         })
     }
 
-    const Logout = async () => {
-        const response = await fetch(`${baseURL}/api/adminLogout`, {
-            method: "GET",
-            headers: {
-                "Content-Type" : "application/json"
-            }
-        })
+    // const Logout = async () => {
+    //     const response = await fetch(`${baseURL}/api/adminLogout`, {
+    //         method: "GET",
+    //         headers: {
+    //             "Content-Type" : "application/json"
+    //         }
+    //     })
 
-        const data = response.json();
-        data.then((res) => {
-            if(res.success){
-                navigate("/adminLogin")
-            }
-        })
-    }
+    //     const data = response.json();
+    //     data.then((res) => {
+    //         if(res.success){
+    //             navigate("/adminLogin")
+    //         }
+    //     })
+    // }
 
 
     return (
