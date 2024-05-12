@@ -11,8 +11,8 @@ function Project(){
 
     useEffect(() => {
         (async () => {
-            // await fetch(`${baseURL}/api/projects`, {
-            await fetch(`/api/projects`, {
+            await fetch(`${baseURL}/api/projects`, {
+            // await fetch(`http://localhost:8000/api/projects`, {
                 method: "GET",
                 headers: {
                     "Content-Type": "application/json"

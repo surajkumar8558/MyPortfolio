@@ -1,3 +1,3 @@
-const baseURL = "https://surajportfolio-kqkw.onrender.coms";
+const baseURL = "https://surajportfolio-kqkw.onrender.com";
 
 export default baseURL;

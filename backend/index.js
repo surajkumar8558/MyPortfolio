@@ -3,15 +3,17 @@ require("dotenv").config();
 const cors = require("cors");
 
 const app = express();
+
+app.use(
+  cors({
+    origin: "https://my-portfolio-six-mocha-53.vercel.app",
+    // origin: "http://localhost:5173",
+    methods: ["GET", "POST", "DELETE", "PUT"],
+    credentials: true,
+  })
+);
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
-
-// app.use(
-//   cors({
-//     origin: "https://my-portfolio-six-mocha-53.vercel.app/",
-//     optionsSuccessStatus: 200,
-//   })
-// );
 
 const data_routes = require("./routes/route.js");
 
