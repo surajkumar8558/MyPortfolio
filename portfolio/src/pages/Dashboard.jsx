@@ -3,11 +3,16 @@ import loginContext from "../context/loginContext";
 import { useNavigate } from "react-router-dom";
 import cut from "../assets/icons/white/cut.svg"
 import baseURL from "../baseUrl";
+import Cookies from "universal-cookie"
 
 function Dashboard(props) {
 
     const navigate = useNavigate();
     const {userLoggedIn} = props;
+
+    const cookie = new Cookies()
+    const access_token = cookie.get("access_token");
+    console.log(access_token)
 
     const [projectImage, setProjectImage] = useState("")
     const [projectCategory, setProjectCategory] = useState("")
@@ -30,9 +35,11 @@ function Dashboard(props) {
     useEffect(() => {
         (async () => {
             await fetch(`${baseURL}/api/dashboard/project`, {
-                method: "GET",
+                method: "POST",
                 headers: {
                     "Content-Type": "application/json"
+                }, {
+                    access_token
                 }
             }).then((res) => {
                 return res.json()

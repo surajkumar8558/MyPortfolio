@@ -66,15 +66,16 @@ const clearCookie = (req, res) => {
 
 const dashboard = (req, res) => {
   const cookie = req.header("Cookie");
+  const access_token = req.body.access_token;
 
-  if (!cookie) {
+  if (!cookie && !access_token) {
     return res.send({
       success: false,
       message: "Invalid Token",
       from: "cookies are not in header",
     });
   }
-  const token = cookie.slice(13);
+  const token = access_token.slice(13);
 
   try {
     jwt.verify(token, process.env.SECRET_KEY, (err) => {
