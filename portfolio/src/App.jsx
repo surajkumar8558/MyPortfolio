@@ -6,6 +6,7 @@ import PrivateRoute from './pages/PrivateRoute';
 import Dashboard from './pages/Dashboard';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { Component } from 'react';
+import Testing from './Testing';
 
 function App() {
 
