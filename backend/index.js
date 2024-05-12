@@ -8,7 +8,7 @@ app.use(express.json());
 
 app.use(
   cors({
-    origin: "https://surajportfolio-kqkw.onrender.coms",
+    origin: "https://my-portfolio-six-mocha-53.vercel.app/",
     optionsSuccessStatus: 200,
   })
 );
