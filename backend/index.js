@@ -6,12 +6,12 @@ const app = express();
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
-app.use(
-  cors({
-    origin: "https://my-portfolio-six-mocha-53.vercel.app/",
-    optionsSuccessStatus: 200,
-  })
-);
+// app.use(
+//   cors({
+//     origin: "https://my-portfolio-six-mocha-53.vercel.app/",
+//     optionsSuccessStatus: 200,
+//   })
+// );
 
 const data_routes = require("./routes/route.js");
 

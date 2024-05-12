@@ -25,12 +25,12 @@ function Dashboard(props) {
     const [editProjectLiveURL, setEditProjectLiveURL] = useState("")
 
     const [projectData, setProjectData] = useState([])
-    const [editPostData, setEditPostData] = useState([]);
     const [showModal, setShowModal] = useState(false);
 
     useEffect(() => {
         (async () => {
-            await fetch(`${baseURL}/api/dashboard/project`, {
+            // await fetch(`${baseURL}/api/dashboard/project`, {
+            await fetch(`/api/dashboard/project`, {
                 method: "GET",
                 headers: {
                     "Content-Type": "application/json"
@@ -45,7 +45,8 @@ function Dashboard(props) {
     
     const createProject = async (e) => {
         e.preventDefault()
-        await fetch(`${baseURL}/api/dashboard/project`, {
+        // await fetch(`${baseURL}/api/dashboard/project`, {
+        await fetch(`/api/dashboard/project`, {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
@@ -75,7 +76,8 @@ function Dashboard(props) {
 
     const updateProject = async (e) => {
         e.preventDefault()
-        await fetch(`${baseURL}/api/dashboard/updateProject`, {
+        // await fetch(`${baseURL}/api/dashboard/updateProject`, {
+        await fetch(`/api/dashboard/updateProject`, {
             method: "PUT",
             headers: {
                 "Content-Type": "application/json"
@@ -92,7 +94,8 @@ function Dashboard(props) {
 
     const deletProject = async (e) => {
         e.preventDefault()
-        await fetch(`${baseURL}/api/dashboard/project`, {
+        // await fetch(`${baseURL}/api/dashboard/project`, {
+        await fetch(`/api/dashboard/project`, {
             method: "DELETE",
             headers: {
                 "Content-Type": "application/json"
@@ -109,7 +112,8 @@ function Dashboard(props) {
     }
 
     const Logout = async () => {
-        const response = await fetch(`${baseURL}/api/adminLogin`, {
+        // const response = await fetch(`${baseURL}/api/adminLogin`, {
+        const response = await fetch(`/api/adminLogin`, {
             method: "GET",
             headers: {
                 "Content-Type" : "application/json"
@@ -136,17 +140,17 @@ function Dashboard(props) {
                         <h1 className="text-white text-xl" >Edit Project</h1>
                         <img className=" cursor-pointer" onClick={() => {setShowModal(false)}} src={cut} height={24} width={24} alt="" />
                         </div>
-                        <input className="p-2 min-w-full w-[40vw] " type="text" name="projectImage" placeholder="Image URL" onChange={(e) => setEditProjectImage(e.target.value)} value={editProjectImage} />
+                        <input className="p-2 min-w-full  " type="text" name="projectImage" placeholder="Image URL" onChange={(e) => setEditProjectImage(e.target.value)} value={editProjectImage} />
 
-                        <input className="p-2 min-w-full w-[40vw] " type="text" name="projectCategory" placeholder="Category" onChange={(e) => setEditProjectCategory(e.target.value)} value={editProjectCategory}  />
+                        <input className="p-2 min-w-full  " type="text" name="projectCategory" placeholder="Category" onChange={(e) => setEditProjectCategory(e.target.value)} value={editProjectCategory}  />
 
-                        <input className="p-2 min-w-full w-[40vw] " type="text" name="projectName" placeholder="Name" onChange={(e) => setEditProjectName(e.target.value)} value={editProjectName} />
+                        <input className="p-2 min-w-full  " type="text" name="projectName" placeholder="Name" onChange={(e) => setEditProjectName(e.target.value)} value={editProjectName} />
 
-                        <textarea className="p-2 min-w-full w-[40vw] " name="projectDescription" rows={6} placeholder="Description" onChange={(e) => setEditProjectDescription(e.target.value)} value={editProjectDescription}></textarea>
+                        <textarea className="p-2 min-w-full  " name="projectDescription" rows={6} placeholder="Description" onChange={(e) => setEditProjectDescription(e.target.value)} value={editProjectDescription}></textarea>
 
-                        <input className="p-2 min-w-full w-[40vw] " type="text" name="projectSourceCode" placeholder="Github Link" onChange={(e) => setEditProjectSourceCode(e.target.value)} value={editProjectSourceCode}  />
+                        <input className="p-2 min-w-full  " type="text" name="projectSourceCode" placeholder="Github Link" onChange={(e) => setEditProjectSourceCode(e.target.value)} value={editProjectSourceCode}  />
 
-                        <input className="p-2 min-w-full w-[40vw] " type="text" name="projectLiveURL" placeholder="Live Project URL" onChange={(e) => setEditProjectLiveURL(e.target.value)} value={editProjectLiveURL} />
+                        <input className="p-2 min-w-full  " type="text" name="projectLiveURL" placeholder="Live Project URL" onChange={(e) => setEditProjectLiveURL(e.target.value)} value={editProjectLiveURL} />
 
                         <div className="flex justify-center items-center gap-4">
                             <button onClick={updateProject} className="bg-card shadow-lg text-white text-lg px-8 py-1 mt-2">Save</button>

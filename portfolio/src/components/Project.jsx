@@ -11,7 +11,8 @@ function Project(){
 
     useEffect(() => {
         (async () => {
-            await fetch(`${baseURL}/api/projects`, {
+            // await fetch(`${baseURL}/api/projects`, {
+            await fetch(`/api/projects`, {
                 method: "GET",
                 headers: {
                     "Content-Type": "application/json"
@@ -35,7 +36,7 @@ function Project(){
 
 
                 {projectData.map((project, index) => (
-                    <div className="mb-16 mx-8 max-w-[1110px] max-h[400px] flex justify-center shadow-2xl 
+                    <div key={index} className="mb-16 mx-8 max-w-[1110px] max-h[400px] flex justify-center shadow-2xl 
                     ls:flex-col
                     vs:flex-col
                     sm:flex-col

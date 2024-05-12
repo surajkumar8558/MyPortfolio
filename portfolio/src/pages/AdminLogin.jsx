@@ -20,7 +20,8 @@ function AdminLogin() {
     const adminLogin = async (e) => {
 
         e.preventDefault()
-        const response = await fetch(`${baseURL}/api/adminLogin`, {
+        // const response = await fetch(`${baseURL}/api/adminLogin`, {
+        const response = await fetch(`/api/adminLogin`, {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
