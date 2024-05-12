@@ -27,11 +27,12 @@ function PrivateRoute(props) {
                     setUserLoggedIn(res.success)
                     navigate("/adminLogin")
                 }
+                setUserLoggedIn(res.success)
             })
         })()
     }, [])
 
-
+    console.log(userLoggedIn)
 
     return (
         <>

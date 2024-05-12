@@ -16,7 +16,8 @@ function AdminLogin() {
     const {userLoggedIn, setUserLoggedIn} = useContext(loginContext);
 
     
-    const CreateUser = async (e) => {
+    const adminLogin = async (e) => {
+
         e.preventDefault()
         const response = await fetch("/api/adminLogin", {
             method: "POST",
@@ -54,7 +55,7 @@ function AdminLogin() {
                     <input className="p-2 min-w-[20vw]" type="email" name="email" placeholder="Email" onChange={(e) => setEmail(e.target.value)} value={email}  />
                     <input className="p-2 min-w-[20vw]" type="password" name="password" placeholder="Password" onChange={(e) => setPassword(e.target.value)} value={password} />
                     {validUser ? "" : <span className="text-gray-400">Only admin allowed</span>}
-                    <button onClick={CreateUser} className="bg-card shadow-lg text-white text-lg px-8 py-1 mt-2">Login</button>
+                    <button onClick={adminLogin} className="bg-card shadow-lg text-white text-lg px-8 py-1 mt-2">Login</button>
                 </form>
             </div>
         </>

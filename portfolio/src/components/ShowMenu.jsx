@@ -1,5 +1,6 @@
 import MenuContext from "../context/MenuContext";
 import { useContext, useState } from "react";
+import { Link } from "react-router-dom";
 
 function ShowMenu(){
 
@@ -13,7 +14,9 @@ function ShowMenu(){
                 <a href="#About" className="text-white">ABOUT</a>
                 <a href="#Skills" className="text-white">SKILLS</a>
                 <a href="#Contact" className="text-white">CONTACT</a>
+                <Link to={"/adminLogin"} >
                 <button className="bg-button text-white px-4 py-1 rounded-full">ADMIN LOGIN</button>
+                </Link>
                 </div>
                 :
                 <></>
