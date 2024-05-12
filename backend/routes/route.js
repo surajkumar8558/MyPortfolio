@@ -10,8 +10,8 @@ router.route("/adminRegister").post(adminRoutes.register);
 router.route("/adminLogin").get(adminRoutes.clearCookie);
 router.route("/adminLogin").post(adminRoutes.login);
 
+router.route("/projects").get(project.getProjectsData);
 router.route("/dashboard").get(adminRoutes.dashboard);
-router.route("/dashboard/project").get(project.getProjectsData);
 router.route("/dashboard/project").post(verifyToken, project.createProject);
 router
   .route("/dashboard/updateProject")

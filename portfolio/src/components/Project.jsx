@@ -9,7 +9,7 @@ function Project(){
 
     useEffect(() => {
         (async () => {
-            await fetch("/api/dashboard/project", {
+            await fetch("/api/projects", {
                 method: "GET",
                 headers: {
                     "Content-Type": "application/json"
