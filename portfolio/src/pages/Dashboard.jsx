@@ -108,7 +108,7 @@ function Dashboard(props) {
     }
 
     const Logout = async () => {
-        const response = await fetch(`${baseURL}/api/adminLogin`, {
+        const response = await fetch(`${baseURL}/api/adminLogout`, {
             method: "GET",
             headers: {
                 "Content-Type" : "application/json"
