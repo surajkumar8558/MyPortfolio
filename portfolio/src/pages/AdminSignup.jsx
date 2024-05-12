@@ -9,8 +9,7 @@ function AdminSignup() {
     
     const CreateUser = async (e) => {
         e.preventDefault()
-        // const response = await fetch(`${baseURL}/api/adminRegister`, {
-        const response = await fetch(`/api/adminRegister`, {
+        const response = await fetch(`${baseURL}/api/adminRegister`, {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"

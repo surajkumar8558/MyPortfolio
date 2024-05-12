@@ -29,8 +29,7 @@ function Dashboard(props) {
 
     useEffect(() => {
         (async () => {
-            // await fetch(`${baseURL}/api/dashboard/project`, {
-            await fetch(`/api/dashboard/project`, {
+            await fetch(`${baseURL}/api/dashboard/project`, {
                 method: "GET",
                 headers: {
                     "Content-Type": "application/json"
@@ -45,8 +44,7 @@ function Dashboard(props) {
     
     const createProject = async (e) => {
         e.preventDefault()
-        // await fetch(`${baseURL}/api/dashboard/project`, {
-        await fetch(`/api/dashboard/project`, {
+        await fetch(`${baseURL}/api/dashboard/project`, {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
@@ -76,8 +74,7 @@ function Dashboard(props) {
 
     const updateProject = async (e) => {
         e.preventDefault()
-        // await fetch(`${baseURL}/api/dashboard/updateProject`, {
-        await fetch(`/api/dashboard/updateProject`, {
+        await fetch(`${baseURL}/api/dashboard/updateProject`, {
             method: "PUT",
             headers: {
                 "Content-Type": "application/json"
@@ -94,8 +91,7 @@ function Dashboard(props) {
 
     const deletProject = async (e) => {
         e.preventDefault()
-        // await fetch(`${baseURL}/api/dashboard/project`, {
-        await fetch(`/api/dashboard/project`, {
+        await fetch(`${baseURL}/api/dashboard/project`, {
             method: "DELETE",
             headers: {
                 "Content-Type": "application/json"
@@ -112,8 +108,7 @@ function Dashboard(props) {
     }
 
     const Logout = async () => {
-        // const response = await fetch(`${baseURL}/api/adminLogin`, {
-        const response = await fetch(`/api/adminLogin`, {
+        const response = await fetch(`${baseURL}/api/adminLogin`, {
             method: "GET",
             headers: {
                 "Content-Type" : "application/json"
