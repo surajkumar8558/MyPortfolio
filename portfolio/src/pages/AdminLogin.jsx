@@ -38,8 +38,6 @@ function AdminLogin() {
         data.then((res) => {
             setValidUser(res.success)
             if(res.success){
-                console.log(userLoggedIn)
-                console.log(res.access_token)
                 cookie.set("access_token", res.access_token)
                 setUserLoggedIn(res)
                 navigate("/dashboard")
