@@ -88,7 +88,6 @@ const dashboard = (req, res) => {
         success: true,
         message: "Hello from dashboard",
       });
-      s;
     });
   } catch (error) {
     console.log(error);
