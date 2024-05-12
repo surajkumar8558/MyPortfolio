@@ -4,7 +4,7 @@ import { useNavigate } from "react-router-dom";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import baseURL from "../baseUrl";
-import cookie from "universal-cookie"
+import Cookies from "universal-cookie"
 
 function AdminLogin() {
 
@@ -12,7 +12,7 @@ function AdminLogin() {
     const [password, setPassword] = useState("")
     const [validUser, setValidUser] = useState(true);
 
-    const cookie = new cookie();
+    const cookie = new Cookies();
 
     const navigate = useNavigate();
 
