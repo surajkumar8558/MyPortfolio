@@ -41,11 +41,11 @@ function AdminLogin() {
                 console.log(userLoggedIn)
                 console.log(res.access_token)
                 cookie.set("access_token", res.access_token)
-                setUserLoggedIn(res.success)
+                setUserLoggedIn(res)
                 navigate("/dashboard")
             } else {
                 console.log(userLoggedIn)
-                setUserLoggedIn(res.success)
+                setUserLoggedIn(res)
                 navigate("/adminLogin")
             }
         }).catch((error) => {

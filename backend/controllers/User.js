@@ -71,6 +71,7 @@ const dashboard = (req, res) => {
     return res.send({
       success: false,
       message: "Invalid Token",
+      from: "cookies are not in header",
     });
   }
   const token = cookie.slice(13);
@@ -81,6 +82,7 @@ const dashboard = (req, res) => {
         return res.send({
           success: false,
           message: "Invalid Token",
+          from: "cookies are not verified",
         });
       }
 
