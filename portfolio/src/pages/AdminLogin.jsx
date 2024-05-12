@@ -4,12 +4,15 @@ import { useNavigate } from "react-router-dom";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import baseURL from "../baseUrl";
+import cookie from "universal-cookie"
 
 function AdminLogin() {
 
     const [email, setEmail] = useState("")
     const [password, setPassword] = useState("")
     const [validUser, setValidUser] = useState(true);
+
+    const cookie = new cookie();
 
     const navigate = useNavigate();
 
@@ -37,6 +40,7 @@ function AdminLogin() {
             if(res.success){
                 console.log(userLoggedIn)
                 console.log(res.access_token)
+                cookie.set("access_token", res.access_token)
                 setUserLoggedIn(res.success)
                 navigate("/dashboard")
             } else {
