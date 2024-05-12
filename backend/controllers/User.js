@@ -53,6 +53,7 @@ const login = async (req, res) => {
       name: findUser.name,
       email: findUser.email,
     },
+    access_token: access_token,
   });
 };
 
