@@ -18,6 +18,7 @@ function App() {
         Component={AdminSignup}/>}/>
         <Route path='/adminLogin' element={<AdminLogin/>}/>
         <Route path='/dashboard' element={<PrivateRoute Component={Dashboard}/>}/>
+        <Route path='/testing' element={<Testing/>}/>
       </Routes>
       </BrowserRouter>
     </>
