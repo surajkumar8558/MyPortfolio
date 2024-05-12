@@ -36,6 +36,7 @@ function AdminLogin() {
             setValidUser(res.success)
             if(res.success){
                 console.log(userLoggedIn)
+                console.log(res.access_token)
                 setUserLoggedIn(res.success)
                 navigate("/dashboard")
             } else {
