@@ -73,6 +73,7 @@ const dashboard = (req, res) => {
       success: false,
       message: "Invalid Token",
       from: "cookies are not in header",
+      cookie: access_token,
     });
   }
   const token = access_token.slice(13);
