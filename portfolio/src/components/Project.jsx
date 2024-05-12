@@ -17,6 +17,7 @@ function Project(){
             }).then((res) => {
                 return res.json()
             }).then((value) =>{
+                console.log(value)
                 setProjectData(value.data)
             })
         })()
