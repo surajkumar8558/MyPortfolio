@@ -8,7 +8,7 @@ app.use(express.json());
 
 app.use(
   cors({
-    origin: "http://example.com",
+    origin: "https://surajportfolio-kqkw.onrender.coms",
     optionsSuccessStatus: 200,
   })
 );
