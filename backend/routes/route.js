@@ -12,9 +12,7 @@ router.route("/adminLogin").post(adminRoutes.login);
 
 router.route("/projects").get(project.getProjectsData);
 router.route("/dashboard").get(adminRoutes.dashboard);
-router
-  .route("/dashboard/project")
-  .dashboard(verifyToken, project.createProject);
+router.route("/dashboard/project").get(verifyToken, project.getProjectsData);
 router.route("/dashboard/project").post(verifyToken, project.createProject);
 router
   .route("/dashboard/updateProject")
