@@ -38,9 +38,10 @@ function Dashboard(props) {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json"
-                }, {
+                }, 
+                body: JSON.stringify({
                     access_token
-                }
+                })
             }).then((res) => {
                 return res.json()
             }).then((value) =>{
