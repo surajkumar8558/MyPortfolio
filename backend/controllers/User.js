@@ -45,6 +45,8 @@ const login = async (req, res) => {
     findUser.password
   );
 
+  console.log(access_token);
+
   return res.cookie("access_token", access_token).json({
     success: true,
     data: {
