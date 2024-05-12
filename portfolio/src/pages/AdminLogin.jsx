@@ -3,6 +3,7 @@ import loginContext from "../context/loginContext";
 import { useNavigate } from "react-router-dom";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import baseURL from "../baseUrl";
 
 function AdminLogin() {
 
@@ -19,7 +20,7 @@ function AdminLogin() {
     const adminLogin = async (e) => {
 
         e.preventDefault()
-        const response = await fetch("/api/adminLogin", {
+        const response = await fetch(`${baseURL}/api/adminLogin`, {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"

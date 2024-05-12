@@ -1,6 +1,7 @@
 import { useNavigate } from "react-router-dom";
 import { useContext, useEffect } from "react";
 import loginContext from "../context/loginContext";
+import baseURL from "../baseUrl";
 
 function PrivateRoute(props) {
     
@@ -12,7 +13,7 @@ function PrivateRoute(props) {
 
     useEffect(() => {
         (async() => {
-            const response = await fetch("/api/dashboard", {
+            const response = await fetch(`${baseURL}/api/dashboard`, {
                 method: "GET",
                 headers: {
                     "Content-Type": "application/json"

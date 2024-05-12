@@ -2,14 +2,16 @@ import { useState } from "react";
 import Beach from "../assets/images/Suraj_Portfolio.png";
 import axios from "axios";
 import { useEffect } from "react";
+import baseURL from "../baseUrl";
 
 
 function Project(){
-     const [projectData, setProjectData] = useState([])
+    
+    const [projectData, setProjectData] = useState([])
 
     useEffect(() => {
         (async () => {
-            await fetch("/api/projects", {
+            await fetch(`${baseURL}/api/projects`, {
                 method: "GET",
                 headers: {
                     "Content-Type": "application/json"

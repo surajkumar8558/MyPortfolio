@@ -2,6 +2,7 @@ import { useContext, useEffect, useState } from "react";
 import loginContext from "../context/loginContext";
 import { useNavigate } from "react-router-dom";
 import cut from "../assets/icons/white/cut.svg"
+import baseURL from "../baseUrl";
 
 function Dashboard(props) {
 
@@ -29,7 +30,7 @@ function Dashboard(props) {
 
     useEffect(() => {
         (async () => {
-            await fetch("/api/dashboard/project", {
+            await fetch(`${baseURL}/api/dashboard/project`, {
                 method: "GET",
                 headers: {
                     "Content-Type": "application/json"
@@ -44,7 +45,7 @@ function Dashboard(props) {
     
     const createProject = async (e) => {
         e.preventDefault()
-        await fetch("/api/dashboard/project", {
+        await fetch(`${baseURL}/api/dashboard/project`, {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
@@ -74,7 +75,7 @@ function Dashboard(props) {
 
     const updateProject = async (e) => {
         e.preventDefault()
-        await fetch("/api/dashboard/updateProject", {
+        await fetch(`${baseURL}/api/dashboard/updateProject`, {
             method: "PUT",
             headers: {
                 "Content-Type": "application/json"
@@ -91,7 +92,7 @@ function Dashboard(props) {
 
     const deletProject = async (e) => {
         e.preventDefault()
-        await fetch("/api/dashboard/project", {
+        await fetch(`${baseURL}/api/dashboard/project`, {
             method: "DELETE",
             headers: {
                 "Content-Type": "application/json"
@@ -108,7 +109,7 @@ function Dashboard(props) {
     }
 
     const Logout = async () => {
-        const response = await fetch("/api/adminLogin", {
+        const response = await fetch(`${baseURL}/api/adminLogin`, {
             method: "GET",
             headers: {
                 "Content-Type" : "application/json"
