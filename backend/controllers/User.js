@@ -76,6 +76,7 @@ const dashboard = (req, res) => {
       cookie: access_token,
     });
   }
+
   const token = access_token.slice(13);
 
   try {
@@ -85,7 +86,7 @@ const dashboard = (req, res) => {
           success: false,
           message: "Invalid Token",
           from: "cookies are not verified",
-          error: err,
+          error: token,
         });
       }
     });
