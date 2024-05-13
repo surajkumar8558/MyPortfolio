@@ -8,7 +8,7 @@ function PrivateRoute(props) {
     
     const {Component} = props;
     const newcookie = new Cookies();
-    const cookie = newcookie.get("access_token");
+    const access_token = newcookie.get("access_token");
     
     const navigate = useNavigate();
     const {userLoggedIn, setUserLoggedIn} = useContext(loginContext);
@@ -22,7 +22,7 @@ function PrivateRoute(props) {
                     "Content-Type": "application/json"
                 },
                 body: JSON.stringify({
-                    cookie
+                    access_token
                 })
             })
 
