@@ -17,6 +17,7 @@ const verifyToken = (req, res, next) => {
         return res.send({
           success: false,
           message: "Invalid Token",
+          from: "verification",
         });
       }
     });
