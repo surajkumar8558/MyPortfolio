@@ -66,14 +66,14 @@ const clearCookie = (req, res) => {
 
 const dashboard = (req, res) => {
   // const cookie = req.header("Cookie");
-  const access_token = req.body;
+  const access_token = req.body.cookie;
 
   if (!access_token) {
     return res.send({
       success: false,
       message: "Invalid Token",
       from: "cookies are not in header",
-      cookie: access_token.access_token,
+      cookie: access_token,
     });
   }
   const token = access_token.slice(13);
