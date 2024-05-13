@@ -19,6 +19,7 @@ const verifyToken = (req, res, next) => {
           success: false,
           message: "Invalid Token",
           from: "verification",
+          access_token: token,
           SECRET_KEY: process.env.SECRET_KEY,
         });
       }
