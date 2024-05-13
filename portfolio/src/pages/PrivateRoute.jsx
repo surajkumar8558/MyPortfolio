@@ -14,7 +14,7 @@ function PrivateRoute(props) {
     useEffect(() => {
         (async() => {
             const response = await fetch(`${baseURL}/api/dashboard`, {
-                method: "GET",
+                method: "POST",
                 headers: {
                     "Content-Type": "application/json"
                 }
