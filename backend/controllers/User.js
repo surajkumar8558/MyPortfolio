@@ -66,7 +66,7 @@ const clearCookie = (req, res) => {
 
 const dashboard = (req, res) => {
   // const cookie = req.header("Cookie");
-  const access_token = req.body.cookie;
+  const access_token = req.body;
 
   if (!access_token) {
     return res.send({
@@ -95,6 +95,10 @@ const dashboard = (req, res) => {
     });
   } catch (error) {
     console.log(error);
+    return res.send({
+      success: true,
+      message: error,
+    });
   }
 };
 
