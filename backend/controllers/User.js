@@ -79,7 +79,7 @@ const dashboard = (req, res) => {
   const token = access_token.slice(13);
 
   try {
-    jwt.verify(token, process.env.SECRET_KEY, (err) => {
+    const verifyToken = jwt.verify(token, process.env.SECRET_KEY, (err) => {
       if (err) {
         return res.send({
           success: false,
@@ -87,11 +87,12 @@ const dashboard = (req, res) => {
           from: "cookies are not verified",
         });
       }
+    });
 
-      return res.send({
-        success: true,
-        message: "Hello from dashboard",
-      });
+    return res.send({
+      success: true,
+      message: "Hello from dashboard",
+      verify: verifyToken,
     });
   } catch (error) {
     console.log(error);
