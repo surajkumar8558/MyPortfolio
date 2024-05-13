@@ -1,7 +1,7 @@
 const jwt = require("jsonwebtoken");
 
 const verifyToken = (req, res, next) => {
-  const cookie = req.header("Cookie");
+  const cookie = req.body.cookie;
 
   if (!cookie) {
     return res.send({
@@ -25,6 +25,8 @@ const verifyToken = (req, res, next) => {
   } catch (error) {
     console.log(error);
   }
+
+  next();
 };
 
 module.exports = { verifyToken };
