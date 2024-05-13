@@ -1,5 +1,6 @@
 const userSchema = require("../models/userSchema.js");
 const jwt = require("jsonwebtoken");
+require("dotenv").config();
 
 const register = async (req, res) => {
   const { name, email, password } = req.body;
