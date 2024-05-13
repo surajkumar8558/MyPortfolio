@@ -85,6 +85,7 @@ const dashboard = (req, res) => {
           success: false,
           message: "Invalid Token",
           from: "cookies are not verified",
+          error: err,
         });
       }
     });
