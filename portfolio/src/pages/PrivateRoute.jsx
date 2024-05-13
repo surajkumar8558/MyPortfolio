@@ -21,9 +21,9 @@ function PrivateRoute(props) {
                 headers: {
                     "Content-Type": "application/json"
                 },
-                body: {
+                body: JSON.stringify({
                     cookie
-                }
+                })
             })
 
             const data = response.json()
