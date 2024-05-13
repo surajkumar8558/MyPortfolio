@@ -66,7 +66,7 @@ const clearCookie = (req, res) => {
 
 const dashboard = (req, res) => {
   // const cookie = req.header("Cookie");
-  const access_token = req.body;
+  const access_token = req.body.cookie;
 
   if (!access_token) {
     return res.send({
