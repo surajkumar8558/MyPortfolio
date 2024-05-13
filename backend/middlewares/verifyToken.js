@@ -1,4 +1,5 @@
 const jwt = require("jsonwebtoken");
+require("dotenv").config();
 
 const verifyToken = (req, res, next) => {
   const cookie = req.body.cookie;
@@ -18,6 +19,7 @@ const verifyToken = (req, res, next) => {
           success: false,
           message: "Invalid Token",
           from: "verification",
+          SECRET_KEY: process.env.SECRET_KEY,
         });
       }
     });
