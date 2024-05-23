@@ -171,7 +171,7 @@ function Dashboard(props) {
                     <a href="/skills">Skills</a> 
                 </li>
                 <li>
-                    <button className="bg-card shadow-lg text-white text-lg px-8 py-1">Logout</button>
+                    <button onClick={Logout} className="bg-card shadow-lg text-white text-lg px-8 py-1">Logout</button>
                 </li>
             </ul>
             <hr />
