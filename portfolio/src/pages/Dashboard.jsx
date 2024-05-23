@@ -35,13 +35,13 @@ function Dashboard(props) {
     useEffect(() => {
         (async () => {
             await fetch(`${baseURL}/api/dashboard/project`, {
-                method: "POST",
+                method: "GET",
                 headers: {
                     "Content-Type": "application/json"
                 }, 
-                body: JSON.stringify({
-                    access_token
-                })
+                // body: JSON.stringify({
+                //     access_token
+                // })
             }).then((res) => {
                 return res.json()
             }).then((value) =>{
