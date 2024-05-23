@@ -39,9 +39,6 @@ function Dashboard(props) {
                 headers: {
                     "Content-Type": "application/json"
                 }, 
-                // body: JSON.stringify({
-                //     access_token
-                // })
             }).then((res) => {
                 return res.json()
             }).then((value) =>{
@@ -115,13 +112,13 @@ function Dashboard(props) {
         })
     }
 
-    // const Logout = async () => {
-    //     const response = await fetch(`${baseURL}/api/adminLogout`, {
-    //         method: "GET",
-    //         headers: {
-    //             "Content-Type" : "application/json"
-    //         }
-    //     })
+    const Logout = async () => {
+        const response = await fetch(`${baseURL}/api/adminLogout`, {
+            method: "GET",
+            headers: {
+                "Content-Type" : "application/json"
+            }
+        })
 
     //     const data = response.json();
     //     data.then((res) => {

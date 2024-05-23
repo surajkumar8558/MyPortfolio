@@ -5,9 +5,8 @@ const project = require("../controllers/Project.js");
 const adminRoutes = require("../controllers/User.js");
 const { verifyToken } = require("../middlewares/verifyToken.js");
 
-// router.route("/").get(project.getproject);
 router.route("/adminRegister").post(adminRoutes.register);
-// router.route("/adminLogout").get(adminRoutes.clearCookie);
+router.route("/adminLogout").get(adminRoutes.clearCookie);
 router.route("/adminLogin").post(adminRoutes.login);
 
 router.route("/projects").get(project.getProjectsData);
