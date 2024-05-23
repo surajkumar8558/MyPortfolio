@@ -2,7 +2,7 @@ const jwt = require("jsonwebtoken");
 require("dotenv").config();
 
 const verifyToken = (req, res, next) => {
-  const cookie = req.headers;
+  const cookie = req.body.access_token;
 
   if (!cookie) {
     return res.send({
@@ -20,6 +20,7 @@ const verifyToken = (req, res, next) => {
           message: "Invalid Token",
           from: "verification",
           access_token: token,
+          error: err,
           SECRET_KEY: process.env.SECRET_KEY,
         });
       }
