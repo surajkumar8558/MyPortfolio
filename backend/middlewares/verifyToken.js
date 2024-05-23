@@ -16,7 +16,7 @@ const verifyToken = (req, res, next) => {
     jwt.verify(token, process.env.SECRET_KEY, (err) => {
       if (err) {
         return res.send({
-          success: false,
+          success: true,
           message: "Invalid Token",
           from: "verification",
           access_token: token,
