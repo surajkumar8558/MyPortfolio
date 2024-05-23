@@ -120,13 +120,13 @@ function Dashboard(props) {
             }
         })
 
-    //     const data = response.json();
-    //     data.then((res) => {
-    //         if(res.success){
-    //             navigate("/adminLogin")
-    //         }
-    //     })
-    // }
+        const data = response.json();
+        data.then((res) => {
+            if(res.success){
+                navigate("/adminLogin")
+            }
+        })
+    }
 
 
     return (
