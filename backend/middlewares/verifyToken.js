@@ -8,8 +8,10 @@ const verifyToken = (req, res, next) => {
     return res.send({
       success: false,
       message: "Invalid Token",
+      CookiValue: cookie,
     });
   }
+
   const token = cookie.slice(13);
 
   try {
