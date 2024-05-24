@@ -8,7 +8,6 @@ app.use(
     origin: "https://my-portfolio-six-mocha-53.vercel.app",
     methods: ["GET", "POST", "DELETE", "PUT"],
     credentials: true,
-    allowedHeaders: true,
   })
 );
 app.use(express.urlencoded({ extended: true }));
