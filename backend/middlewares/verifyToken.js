@@ -7,6 +7,7 @@ const verifyToken = (req, res, next) => {
   if (!cookie) {
     return res.send({
       success: false,
+      from: "headers",
       message: "Invalid Token",
       CookiValue: cookie,
     });
@@ -23,7 +24,6 @@ const verifyToken = (req, res, next) => {
           from: "verification",
           access_token: token,
           error: err,
-          SECRET_KEY: process.env.SECRET_KEY,
         });
       }
     });
