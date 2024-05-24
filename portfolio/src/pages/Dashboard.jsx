@@ -12,7 +12,6 @@ function Dashboard(props) {
 
     const cookie = new Cookies()
     const access_token = cookie.get("access_token");
-    console.log(access_token)
 
     const [projectImage, setProjectImage] = useState("")
     const [projectCategory, setProjectCategory] = useState("")
@@ -55,7 +54,7 @@ function Dashboard(props) {
                 "Content-Type": "application/json"
             },
             body: JSON.stringify({
-              projectImage, projectCategory, projectName, projectDescription, projectSourceCode, projectLiveURL
+              access_token, projectImage, projectCategory, projectName, projectDescription, projectSourceCode, projectLiveURL
             })
         }).then((res) => {
             console.log(res.json())
@@ -85,7 +84,7 @@ function Dashboard(props) {
                 "Content-Type": "application/json"
             },
             body: JSON.stringify({
-              editProjectId, editProjectImage, editProjectCategory, editProjectName, editProjectDescription, editProjectSourceCode, editProjectLiveURL
+              access_token, editProjectId, editProjectImage, editProjectCategory, editProjectName, editProjectDescription, editProjectSourceCode, editProjectLiveURL
             })
         }).then((res) => {
             console.log(res.json())
@@ -102,7 +101,7 @@ function Dashboard(props) {
                 "Content-Type": "application/json"
             },
             body: JSON.stringify({
-              editProjectId
+              access_token, editProjectId
             })
         }).then((res) => {
             console.log(res.json())
