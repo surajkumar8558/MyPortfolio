@@ -228,7 +228,7 @@ function Dashboard(props) {
                                 <button className="bg-button px-8 py-2 rounded-full">View Code</button>
                             </a>
                             <a href={project.projectLiveURL}>
-                                <button className="bg-button px-8 py-2 rounded-full mt-4">View Live</button>
+                                <button className="bg-button px-8 py-2 rounded-full">View Live</button>
                             </a>
                         </div>
                             <button onClick={() => editPost(project)} className="bg-button mt-4 px-8 py-2 rounded-full">Edit Post</button>
