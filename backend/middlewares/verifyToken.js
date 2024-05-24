@@ -12,13 +12,13 @@ const verifyToken = (req, res, next) => {
     });
   }
 
-  const token = cookie.slice(13);
+  // const token = cookie.slice(13);
 
   try {
     jwt.verify(token, process.env.SECRET_KEY, (err) => {
       if (err) {
         return res.send({
-          success: true,
+          success: false,
           message: "Invalid Token",
           from: "verification",
           access_token: token,
