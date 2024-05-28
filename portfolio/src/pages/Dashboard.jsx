@@ -4,9 +4,11 @@ import { useNavigate } from "react-router-dom";
 import cut from "../assets/icons/white/cut.svg"
 import baseURL from "../baseUrl";
 import Cookies from "universal-cookie"
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 function Dashboard(props) {
-
+    toast("Wow so easy!");
     const navigate = useNavigate();
     const {userLoggedIn} = props;
 
@@ -218,7 +220,7 @@ function Dashboard(props) {
                         <div className="h-[100%] mt-4 flex justify-around items-end
                         vs:mt-8
                         vs:items-start
-                        vs:flex-col
+                        vs:flex
                         ls:items-start
                         ls:mt-8
                         sm:mt-8

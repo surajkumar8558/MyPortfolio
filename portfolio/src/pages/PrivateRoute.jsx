@@ -3,6 +3,8 @@ import { useContext, useEffect } from "react";
 import loginContext from "../context/loginContext";
 import baseURL from "../baseUrl";
 import Cookies from "universal-cookie";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 function PrivateRoute(props) {
     
@@ -30,10 +32,32 @@ function PrivateRoute(props) {
             
             data.then(res => {
                 console.log(res)
-                if(!res.success){                    
+                if(!res.success){               
+                    toast("Only Admin Allowed", {
+                        type: "warning",
+                        position: "top-right",
+                        autoClose: 5000,
+                        hideProgressBar: false,
+                        closeOnClick: true,
+                        pauseOnHover: true,
+                        draggable: true,
+                        progress: undefined,
+                        theme: "light"
+                    })     
                     setUserLoggedIn(res.success)
                     navigate("/adminLogin")
                 }
+                toast("Login Successfully", {
+                        type: "success",
+                        position: "top-right",
+                        autoClose: 5000,
+                        hideProgressBar: false,
+                        closeOnClick: true,
+                        pauseOnHover: true,
+                        draggable: true,
+                        progress: undefined,
+                        theme: "light"
+                    }) 
                 setUserLoggedIn(res.success)
             })
         })()
