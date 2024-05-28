@@ -231,7 +231,7 @@ function Dashboard(props) {
                                 <button className="bg-button px-8 py-2 rounded-full">View Live</button>
                             </a>
                         </div>
-                            <button onClick={() => editPost(project)} className="bg-button mt-4 px-8 py-2 rounded-full">Edit Post</button>
+                            <button onClick={() => editPost(project)} className="bg-button mt-4 px-8 py-2 rounded-full">Edit Project</button>
                     </div>  
                 </div>
                 ))}
